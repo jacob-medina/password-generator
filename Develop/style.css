@@ -17,10 +17,29 @@ body {
   background-color: #f9fbfd;
 }
 
+ul {
+  padding: 0;
+}
+
+li {
+  font-size: small;
+  list-style-type: none;
+  text-align: start;
+  color: hsl(206, 17%, 28%);
+}
+
 .wrapper {
   padding-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
 }
 
 header {
@@ -86,6 +105,16 @@ header {
   padding: 14px 34px;
   text-align: center;
   cursor: pointer;
+  transition-property: background-color;
+  transition-duration: 0.2s;
+}
+
+.btn:hover {
+  background-color: hsl(0, 52%, 48%);
+}
+
+.btn:active {
+  background-color: hsl(0, 82%, 30%);
 }
 
 button[disabled] {
@@ -116,6 +145,29 @@ button[disabled] {
   border-radius: 6px;
   resize: none;
   overflow: hidden;
+}
+
+#refresh,
+.criteria {
+  display: none;
+}
+
+.criteria-used {
+  color: green;
+}
+
+.criteria-used::before {
+  content: "✓ ";
+}
+
+.criteria-crossed {
+  color: rgb(155, 155, 155);
+  text-decoration: line-through;
+}
+
+.criteria-crossed::before {
+  content: "✗ ";
+  text-decoration: none;
 }
 
 @media (max-width: 690px) {
