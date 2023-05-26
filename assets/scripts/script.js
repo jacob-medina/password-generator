@@ -96,8 +96,6 @@ function createCharacterTypeArray(criteria) {
     }
   }
 
-  console.log(passwordChars);
-
   return {charTypes: validCharTypes, password: passwordChars};
 }
 
